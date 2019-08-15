@@ -1,0 +1,18 @@
+1. npm install express express-generator -g
+2. express -e myapp     //-e 简写成: -view=ejs 安装ejs模板引擎
+3. cd myapp   npm install   npm start
+  注释：
+
+    bin：存放启动脚本文件
+
+    bin/www：启动脚本文件，可修改端口号，等功能。
+
+    public：存放图片，css，js等静态文件
+
+    routes：存放路由模块文件
+
+    views：存放视图文件，使用的ejs模板引擎
+
+    app.js：入口文件，重要的配置文件
+
+    package.json：工程信息和安装依赖文件  
