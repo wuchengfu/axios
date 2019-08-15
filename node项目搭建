@@ -1,6 +1,8 @@
-1. npm install express express-generator -g
-2. express -e myapp     //-e 简写成: -view=ejs 安装ejs模板引擎
-3. cd myapp   npm install   npm start
+1. 下载骨架: npm install express express-generator -g
+2. 创建项目: express -e myapp     //-e 简写成: -view=ejs 安装ejs模板引擎
+3. 运行项目: cd myapp   npm install   npm start
+4. node热启动 : npm install nodemon --save
+5. 和app.js同级创建一个nodemon.json
   注释：
 
     bin：存放启动脚本文件
@@ -16,3 +18,24 @@
     app.js：入口文件，重要的配置文件
 
     package.json：工程信息和安装依赖文件  
+
+
+nodemon.json 如下:
+    {
+      "restartable" : "rs",
+      "ingore" : [
+        ".git",
+        ".svn",
+        "node_modules/**/node_modules"
+      ],
+      "verbose" : true,
+      "execMap" : {
+        "js" : "none --harmony"
+      },
+      "watch" : [
+      ],
+      "env" : {
+        "NODE_ENV" : "development"
+      },
+      "ext" : "js json"
+    }
