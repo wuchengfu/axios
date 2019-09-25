@@ -58,7 +58,7 @@
 	// 标签自带的属性用prop自定义属性用attr   
 	// checked selected disabled使用prop
 	function btnClick(){
-		console.log(d1.value)
+		console.log(d1.value)   //获取inut的value值     id.value
 		// let id = document.querySelector("input[type='radio']:checked").ge("id");
 		// console.log(id)
 		let values = document.querySelector("input[type='radio']:checked").value;
