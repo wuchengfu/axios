@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style type="text/css">
+	input{
+		display: none;
+	}
+	label{
+		cursor: pointer;
+		margin-left: 100px;
+	}
+	.icon{
+		display: inline-block;
+		width: 14px;
+		height: 14px;
+		background: url('sprite_a.png');
+	}
+	.icon-radio{
+		background-position: -120px -150px;
+	}
+	i{
+
+	}
+	/* input type属性等于radio选中的兄弟class名为icon-radio的高亮 */
+	input[type="radio"]:checked + .icon-radio{ 
+		background-position: -144px -150px;
+	}
+
+</style>
+<body>
+	 <button type="button" onclick="btnClick()">按钮</button>
+	 <br/>
+	  <br/>
+	   <br/>
+	    <br/>
+	     <br/> <br/>
+	<label for="d1">
+		<input type="radio" name="radios" id="d1" value="1">
+		<i class="icon icon-radio"></i>
+		小学
+	</label>
+	<label for="d2">
+		<input type="radio" name="radios" id="d2" value="2">
+		<i class="icon icon-radio"></i>
+		初中
+	</label>
+	<label for="d3">
+		<input type="radio" name="radios" id="d3" value="3">
+		<i class="icon icon-radio"></i>
+		高中
+	</label>
+</body>
+
+<script type="text/javascript">
+	// 标签自带的属性用prop自定义属性用attr   
+	// checked selected disabled使用prop
+	function btnClick(){
+		console.log(d1.value)
+		// let id = document.querySelector("input[type='radio']:checked").ge("id");
+		// console.log(id)
+		let values = document.querySelector("input[type='radio']:checked").value;
+		console.log(values);
+	}
+</script>
+</html>
